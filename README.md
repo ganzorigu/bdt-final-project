@@ -23,7 +23,7 @@ IoT is said to be the next big thing like the internet in the past. There will b
 
 For this purpose, I have used raspberry pi as edge iot device which has IMU sensor reporting acceleration data in X, Y, Z directions. 
 
-<img src="img/iot_node.png" alt="iot node" width="400"/>
+<img src="./img/iot_node.png" alt="iot node" width="400"/>
 
 In short, data will flow in following manner.
 
