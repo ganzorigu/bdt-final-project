@@ -23,11 +23,11 @@ IoT is said to be the next big thing like the internet in the past. There will b
 
 For this purpose, I have used raspberry pi as edge iot device which has IMU sensor reporting acceleration data in X, Y, Z directions. 
 
-<img src="./img/iot_node.png" alt="iot node" width="400"/>
+<img src="./img/iot_node_.png" alt="iot node" width="400"/>
 
 In short, data will flow in following manner.
 
-<img src="./img/diagram.png" alt="diagram" width="800"/>
+<img src="./img/diagram_.png" alt="diagram" width="800"/>
 
 [MQTT](https://mqtt.org/) is the simple, lightweight tcp based protocol used for transferring data. Of course, we can add more security by using ssl, authorization using credentials. But for simplicity, I have ommitted security layer. MQTT operates very much similar to kafka. There is a concept publisher, subcriber. It is analogous to producer, consumer. And there is topic. 
 
@@ -153,7 +153,7 @@ python iot_sensor.py
 As soon as you execute, following will be printed to console. These are acceleration value of X, Y, Z axis. `Connected to broker` means node is connected to MQTT broker running on the host PC and successfully publish data into topic `/sensor/1/get/`. Inside the topic, there is index 1 which identifies the actual node. There can be thousands of nodes.
 
 Using the [mqtt-client-tool](https://mqttfx.jensd.de/index.php/download), it can verified whether sensor data is correctly published to MQTT broker.
-<img src="./img/mqtt_client.png" alt="diagram" width="800"/>
+<img src="./img/mqtt_client_.png" alt="diagram" width="800"/>
 
 
 ```
