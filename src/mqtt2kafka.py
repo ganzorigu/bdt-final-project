@@ -5,6 +5,8 @@ from kafka import KafkaProducer
 from time import sleep 
 import sys 
 
+from datetime import datetime
+
 BROKER = 'localhost:-9092'                                                                         
 TOPIC = 'sensors' 
 
@@ -22,12 +24,15 @@ def on_connect(client, userdata, flags, rc):
   client.subscribe("/sensor/1/get")
 
 def on_message(client, userdata, msg):
-	global count
-	print(msg.payload.decode())
-	
-	p.send(TOPIC, bytes(msg.payload.decode(), encoding="utf8"))
+	global count	
+	# current date and time
+	timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+	tempString = msg.payload.decode() + " " + timestamp
+	print(tempString)
+
+	p.send(TOPIC, bytes(tempString, encoding="utf8"))
 	count = count + 1
-	if count >= 10:
+	if count >= 50:
 		print("client will disconnect")
 		client.disconnect()
     

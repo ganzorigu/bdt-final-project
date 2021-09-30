@@ -173,23 +173,11 @@ python3 mqtt2kafka.py
 ```
 If we run provided consumer shell, following should be printed on the console.
 ```
-kafka@ubuntu:~/kafka$ ~/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic sensors --from-beginning
-Northeast quells 
-Lockheed's misfitted disjoint minstrels Baffin easterlies 
-perambulated generalities chaplain's Bundestag's impertinent dills 
-incubating kickers mortgagee's agglutinating sopped 
-Torrance's Vladimir justices levered 
-farmer's verifies surefooted quintuplet's Jacobean 
-Kikuyu Watkins hemoglobin's exhumation supercharger sourced 
-0.213 0.354 10.071
-0.191 0.340 10.074
-0.206 0.337 10.088
-0.232 0.349 10.079
-0.220 0.354 10.088
-0.256 0.361 10.047
-0.230 0.349 10.067
-0.213 0.345 10.076
-0.194 0.325 10.064
+~/kafka/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic sensors
+0.117 -0.493 10.074 2021-09-29 23:10:13
+0.141 -0.529 10.086 2021-09-29 23:10:15
+0.172 -0.593 10.081 2021-09-29 23:10:17
+0.124 -0.522 10.091 2021-09-29 23:10:19
 ```
 
 Afterwards, data is in the kafka, we can consume this data, do the proper transformation and store the result on the hive.
@@ -197,3 +185,17 @@ Afterwards, data is in the kafka, we can consume this data, do the proper transf
 ```
 spark-submit --jars spark-streaming-kafka-0-8-assembly_2.11-2.4.8.jar transform.py
 ```
+```
+Earthquake!...
+Earthquake!...
++---+----+----+-------------------+
+|  x|   y|   z|                  t|
++---+----+----+-------------------+
+|-25|-936| 401|2021-09-29 23:11:40|
+| 13| -52|1008|2021-09-29 23:11:42|
+| 13| -55|1008|2021-09-29 23:11:44|
++---+----+----+-------------------+
+
+```
+Note: if absolute value of x or y value reaches above 500, there is tilt in that direction, and message Earthquake is printed.
+
