@@ -40,7 +40,7 @@ Project Tasks:
 - **`[3]`** Create a simple demo project for any of the following tools: Kafka </br>
 *Main project uses kafka.*
 - **`[4]`** Record a demo of your Presentation of all the above 3 parts.</br>
-*[Recorded demo](https:example.com)*
+*[Recorded demo](https://web.microsoftstream.com/video/7124b236-af89-4738-9938-e5cf42bea335)*
 
 
 # Requirements
