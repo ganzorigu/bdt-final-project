@@ -8,7 +8,7 @@ Took a permission to submit the final project in 2 days (09/28/2021). It will be
 - Student: Ganzorig Ulziibayar
 - Course: Big Data Technology
 - Professor: Mrudula Mukadam
-- VIDEO LINK: 
+- VIDEO LINK: https://web.microsoftstream.com/video/7124b236-af89-4738-9938-e5cf42bea335
 
 **Table of Contents**
 1. [Overview](#overview)
